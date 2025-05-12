@@ -32,6 +32,8 @@ def index(request):
 #가져온 책들을 ListView 형태로 보여줌
 class BookListView(generic.ListView):
     model = Book
+    template_name = 'book_list.html'  # ← 이 경로로 직접 지정
 
 class BookDetailView(generic.DetailView):
     model = Book
+    template_name = 'book_detail.html'
